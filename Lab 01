@@ -77,7 +77,8 @@ SELECT product_name
 	, list_price
 FROM northwind.products
 ORDER BY list_price DESC
-LIMIT 10;
+LIMIT 10
+;
 
 -- ------------------------------------------------------------------ 
 -- 9). Count of Current and Discontinued Products 
@@ -91,7 +92,7 @@ SELECT CASE discontinued
     , COUNT(*) AS product_count
  FROM northwind.products
 GROUP BY discontinued
- ;
+;
 
 UPDATE northwind.products SET discontinued = 0 WHERE id = 95;
 -- ------------------------------------------------------------------
@@ -114,7 +115,7 @@ SELECT * FROM northwind.shippers;
 -- ------------------------------------------------------------------
 -- 11). Products with Supplier Company & Address Info
 -- ------------------------------------------------------------------
-SELECT * FROM northwind.products;
+
 
 
 -- ------------------------------------------------------------------
